@@ -30,7 +30,7 @@ export class AuthService {
         }
         const { password: userPassword } = user;
         const [salt, hashedPassword] = userPassword.split(".");
-        const hash = await scrypt(password, salt, 23) as Buffer;
+        const hash = await scrypt(password, salt, 32) as Buffer;
         if (hash.toString('hex') !== hashedPassword) {
             throw new BadRequestException("Password doesn't matched")
         }
