@@ -3,6 +3,9 @@ import { User } from "../../users/user.entity";
 
 export class ReportDto {
     @Expose()
+    id: number;
+
+    @Expose()
     make: string;
 
     @Expose()
@@ -22,6 +25,9 @@ export class ReportDto {
 
     @Expose()
     mileage: number;
+
+    @Expose()
+    approved: boolean;
 
     // @Expose()
     // @Transform(({ obj }) => {
