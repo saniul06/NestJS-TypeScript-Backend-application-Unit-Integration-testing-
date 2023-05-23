@@ -17,7 +17,7 @@ export class UsersController {
     @UseGuards(AuthGuard)
     @Get('whoami')
     async(@CurrentUser() user: User) {
-        console.log('usr is: ', typeof user)
+        console.log('usr is: ', user)
         return user;
     }
 
