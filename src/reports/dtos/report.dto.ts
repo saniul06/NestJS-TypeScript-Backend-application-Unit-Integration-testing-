@@ -37,5 +37,5 @@ export class ReportDto {
     // })
     @Expose()
     @Transform(({ obj }) => obj.user.id)
-    userid: User;
+    userid: number;
 }
